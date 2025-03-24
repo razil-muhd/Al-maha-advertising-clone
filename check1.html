@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form</title>
+</head>
+<body>
+	<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel img {
+            width: 100%;
+            display: none;
+            position: absolute;
+            animation: fade 1.5s ease-in-out infinite;
+        }
+
+        @keyframes fade {
+            0%, 100% {
+                opacity: 0;
+            }
+            25%, 75% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="carousel">
+    <img src=C:\Users\razil\OneDrive\Desktop\pr16\ed.jpg" alt="Image 1">
+    <img src= "C:\Users\razil\OneDrive\Desktop\pr16\bcc.jpg" alt="Image 2">
+    <img src="C:\Users\razil\OneDrive\Desktop\pr16\p18.jpeg" alt="Image 3">
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let currentImage = 0;
+        const images = document.querySelectorAll('.carousel img');
+
+        function showImage(index) {
+            images.forEach((image, i) => {
+                if (i === index) {
+                    image.style.display = 'block';
+                } else {
+                    image.style.display = 'none';
+                }
+            });
+        }
+
+        function nextImage() {
+            currentImage = (currentImage + 1) % images.length;
+            showImage(currentImage);
+        }
+
+        // Initial display
+        showImage(currentImage);
+
+        // Set interval for the next image
+        setInterval(nextImage, 3000); // Change 3000 to the desired interval in milliseconds
+    });
+</script>
+
+</body>
+</html>
+
+	
+</body>
+</html>

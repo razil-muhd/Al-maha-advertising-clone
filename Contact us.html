@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/x-icon" href="AL-MAHA-Logo.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 50px auto;
+            background-color: lightskyblue;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 10, 10, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid red;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 10, 10, 0.1);
+            background-color: skyblue;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            color: black;
+            block-size: auto;
+            
+        }
+        .logo{
+   
+   width:180px;
+   height: 70px;
+   margin-top: 17px;
+   margin-left: 70px;
+}
+.fb{
+
+width:30px;
+height:20px;
+float: right;
+margin-top: 26px;
+margin-right: 80px;
+}
+.ig{
+line-height: 80px;
+width:30px;
+height:20px;
+float: right;
+margin-top: 26px;
+margin-right:-80px;
+
+}
+nav{
+    height: 100px;
+    width: 100%;
+    background:#333d79;
+}
+nav ul{
+    float:right;
+    margin-right: 350px;
+    margin-top: 10px;
+}
+nav li{
+    display:inline-block;
+    margin: 0 8px;
+  line-height: 80px;
+}
+nav ul a{
+    color:white;
+    font-size:18px;
+    text-transform:uppercase;
+ padding: 7px 10px;
+    border-radius: 3px;
+    border: 1px solid black;
+
+}
+ ul li a:hover,
+ ul li a.active {
+    background: white;
+    color: #2b1055;
+}
+    </style>
+</head>
+<body background="parallax-bg2.jpg">
+    <nav>
+        <img class="logo" src="MAIN LOGO.png" alt="logo">
+         <a href="https://www.facebook.com/Almahaadvt/">
+            <img class="fb" src="facebook.svg" alt="fb">
+    
+         </a>
+         <a href="https://www.instagram.com/almaha_advt/?hl=en">
+            <img class="ig" src="instagram.svg" alt="ig">
+         </a>
+             
+        <ul>
+            <li><a href="almaha.html"><b>HOME</b></a></li>
+            <li><a href="aboutus.html" >ABOUT US</a></li>
+            <li><a href="PORTFOLIO.html">PORTFOLIO</a></li>
+            <li><a href="Contact us.html" class="active">CONTACT US</a></li>
+           
+    
+        </ul>
+    </nav>
+    <div class="contact-container">
+        <h1><b>Contact Information</b></h1>
+        
+        <div class="contact-info">
+            <p><strong>Address:</strong>P.O. Box: 67873, Sharjah. U.A.E</p>
+            <p><strong>Phone:</strong> +971-6-5620773</p>
+            <p><strong>Mobile:</strong>  +971-55-699-4868</p>
+            <p><strong>Email:</strong> almahaadvt@gmail.com</p>
+        </div>
+    </div>
+
+    <form id="contactForm">
+        <h1><b>GET IN TOUCH</b></h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+          
+
+            alert(" submitted Succesfully! " );
+        }
+    </script>
+
+</body>
+</html>
